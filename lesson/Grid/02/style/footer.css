@@ -1,0 +1,11 @@
+footer{
+position: fixed; /* фиксированная позиция */
+bottom: 0; /* с низу отступ */
+left: 0; /* с лева отступ */
+right: 0; /* с права отступ */
+padding: 10px; /* отступ внутри */
+/*background-color: black; /* цвект фона */
+background-color: rgba(6,6,6, 0.55); /*цвет меню */
+color: white; /* цвет букв */
+text-align: center;
+}

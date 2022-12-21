@@ -1,0 +1,12 @@
+/* шапка */
+@import url("header.css");
+/* меню сайта */
+@import url("menu.css");
+/*разрешение 1200px контерна монитора */
+@import url("monitor.css");
+/* подвал сайта */
+@import url("footer.css");
+/* контент */
+@import url("main.css");
+/*правое меню погода */
+@import url("sidebar2.css");

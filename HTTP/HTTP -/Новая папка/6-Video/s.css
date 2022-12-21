@@ -1,0 +1,107 @@
+.fullscreen-bg {
+    overflow: hidden;
+    z-index: -100;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top:45%;
+}
+ 
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.overlay h1 {
+    text-align:center;
+    color:#fff;
+    font-size: 70px;
+    margin-top:17%;
+}
+
+
+
+
+
+
+/* начало разметки страницы */
+
+.layout { width: 100%; }
+   .layout TD { vertical-align: top; padding: 5px; }
+   .col1 {
+    width: 250px; /* Ширина первой колонки */
+	/*
+    background: #fc0; /* Цвет фона первой колонки */
+	
+   }
+   .col2 {
+    /*
+	background: #afccdb; /* Цвет фона второй колонки */
+   }
+   .col3 {
+    width: 250px; /* Ширина третьей колонки */
+	/*
+    background: #fc0; /* Цвет фона третьей колонки */
+   }
+
+/* конец разметки страницы */
+
+/* начало - вид ссылки при наведении на нее курсора мыши */
+
+a:link {
+    color: #0000d0;  /* Цвет обычной ссылки */ 
+    padding: 2px; /* Поля вокруг текста */ 
+   }
+   a:visited {
+    color: #800080; /* Цвет посещенной ссылки */
+	}
+   a:hover {
+	text-decoration: none; /* Убираем подчеркивание */
+    background: #cefcfd; /* цвет фона под ссылкой */ 
+    color: #0F0E0E; /* Цвет ссылки при наведении на нее курсора мыши */  
+   } 
+
+ /* конец - вид ссылки при наведении на нее курсора мыши */
+
+
+/******************************/
+
+/*  начало кода кнопки button*/
+button{
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  color: #111;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 200;
+  transition: all 0.2s;
+  margin: 5px;
+  border-bottom: 0px solid #eee;
+  cursor:pointer;
+}
+
+button:active{
+  transform: scaleX(0.9) translateY(4px);
+}
+/* цвета кнопки */
+button.green{
+ /* цвет кнопки background: #98ecfb;*/
+ background: #cefcfd;
+}
+button.green:not(:active){
+  /* тень кнопки */
+  border-bottom: 4px solid #00b9d16a;
+}
+
+/*  конец кода кнопки button*/

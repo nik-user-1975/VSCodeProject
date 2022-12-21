@@ -1,0 +1,44 @@
+.wrapper {
+ 
+}
+.wrapper.hidden {
+  display: none;
+}
+
+body:{
+			background-color: #e6e6fa;
+			color:#191970;
+			font-family: Arial, Verbana, sans-serif;
+		}
+		h1{
+			background-color: #191970;
+			color:#e6e6fa;
+			font-family: Georgia, "Times New Roman", serif;
+		}
+		.nav{
+			font-weight:bold;
+			font-size: 1.25em;
+		}
+		h2{
+			background-color: #aeaed4;
+			color:#191970;
+			font-family: Georgia, "Times New Roman", serif;
+			text-align: center;
+		}
+		p { font-size: .90em;  <!-- ШРИФТ -->
+			text-indent: 3em;   <!-- ОТСТУП -->
+		}
+		.companyname{
+			font-weight: bold;
+			font-family: Georgia, "Times New Roman", serif;
+			font-size: 1.25em;
+		}
+		ul { font-weight: bold; }
+		.feature{
+			color:#ff0000;
+		}
+		.footer{
+			color: #333333;
+			font-size: .75em;
+			font-style: italic;
+		}

@@ -1,0 +1,66 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+}
+
+/* конец кода сброса стилей браузера */
+
+/* начало меню */
+
+/* задаем меню */
+nav {
+	background-color: rgb(25,25,25); /*цвет меню */
+	border: 1px solid rgba(255,255,255,.5);	/* цвет линии обрамления*/
+	border-left: none;
+	border-right: none;
+	/* Фиксирует позицию всегда сверху */
+	/*position: sticky;
+	top: 0;*/
+}
+
+/*убриаем все отступы*/
+nav ul {
+	padding: 0;
+	margin: 0;	
+}
+/* меню li - выстроить по горизонтали*/
+nav li {
+	float: left; /* выстраиваем в линию */
+	/*padding: 0;
+	margin: 0;*/
+	list-style: none;	/* убираем точки */ /* Отключение отображения маркеров. */
+}
+/* вернется цвет черный */
+.clear {
+	zoom: 1;	
+}
+.clear:after {
+  content: " ";
+  /*display: block;*/ /* Изменение отображения на блочное для того чтобы иметь возможность задать внутренние отступы. */
+  display: table; /*  ведет себя как таблица */
+  clear: both;
+}
+
+/* на ссылку */
+nav a {
+	float: left; /* Выстраивание элементов списка в один ряд. */
+	font-size: .8em;	/* Размер текста в ссылках. */
+	color: white; /* цвет букв */
+	font-weight: normal;
+	text-decoration: none;
+	padding: 10px;
+	border-right: 1px dashed rgba(255,255,255,.75); /* цвет разделителей  */
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+/* убираекм последний разделитель */
+nav li:last-of-type a {
+	border-right: none;	 
+}
+/* меняем цвет при наведение мыши */
+nav a:hover {
+	background-color: rgb(93,43,78);
+}
+/* конец меню */

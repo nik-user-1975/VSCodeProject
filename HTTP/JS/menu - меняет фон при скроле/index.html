@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>itProger</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+
+
+  Шаблоны грид-областей
+В предыдущем обзоре мы рассмотрели грид-линии и то, как с их помощью размещать элементы в гридах. Когда вы работаете с CSS Grid Layout, у вас всегда есть грид-линии, поэтому они - быстрый, прямой и надёжный способ расположить элементы. Как бы то ни было, существует альтернативный метод, и этот метод можно использовать как в одиночку, так и в сочетании с расположением элементов по грид-линиям. В этом методе элементы располагаются с помощью именованных, заранее определённых грид-областей. Давайте рассмотрим, как он работает, и вы скоро поймёте, почему его называют методом ascii-искусства в концепции макетов на гридах!
+
+Имя для грид-области
+Вы уже знакомы со свойством grid-area. Это то свойство, которое принимает в качестве значения номера четырёх грид-линий, определяющих расположение грид-области.
+
+.box1 {
+   grid-area: 1 / 1 / 4 / 2;
+}
+Copy to Clipboard
+Что мы делаем, когда задаём все четыре значения? Мы определяем область, ограниченную данными грид-линиями.
+
+Грид область, определенная грид-линиями
+Другой способ определить грид-область, - задать ей имя и определить местоположение как значения свойства grid-template-areas. Вы можете выбрать для грид-области любое имя. Например, если нам нужно создать макет согласно картинке ниже, мы можем назвать четыре основных области следующим образом:
+
+header
+footer
+sidebar
+основное содержимое content
+На изображении показан простой двухколоночный макет с заголовком и подвалом
+С помощью свойства grid-area мы можем назначить каждой из этих областей своё собственное имя. Именование областей ещё не создаёт никакого макета, однако теперь у нас есть именованные области, которые мы можем в нем использовать.
+
+.header {
+    grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+Copy to Clipboard
+Определив имена, мы можем приступить к созданию макета. На этот раз вместо того, чтобы расположить элементы с помощью номеров линий, заданных для самих элементов, мы создаём весь макет в грид-контейнере.
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      "ft ft ft ft   ft   ft   ft   ft   ft";
+}
+Copy to Clipboard
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+Copy to Clipboard
+
+Если мы используем этот метод, то нам не нужно задавать что-то отдельно для грид-элементов, все задаётся для грид-контейнера. Весь макет описывается значением свойства grid-template-areas.
+
+Оставляем ячейку пустой
+В данном примере мы полностью заполнили грид областями и не оставили пустого пространства. Однако, наш метод также позволяет оставлять грид-ячейки пустыми. Чтобы сделать это воспользуйтесь символом точки, '.'. Если нам нужно отображать футер только под основным содержимым страницы, значит, мы должны оставить три ячейки под сайдбаром пустыми.
+
+.header {
+    grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+Copy to Clipboard
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      ".  .  .  ft   ft   ft   ft   ft   ft";
+}
+Copy to Clipboard
+<div class="wrapper">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+Copy to Clipboard
+
+Чтобы сделать наш макет чище, мы можем использовать множество символов .. Если между точками нет пробелов, то они считаются одной ячейкой. В комплексных макетах подобная возможность помогает аккуратно выравнивать строки и колонки. То есть, вы прямо в CSS можете видеть, как выглядит ваш макет.
+
+Охватываем несколько ячеек
+В нашем примере каждая из областей охватывает несколько грид-ячеек, и получаем мы подобный эффект за счёт того, что через пробел повторяем имя этой грид-области несколько раз. Вы можете добавить дополнительные пробелы, чтобы аккуратно выравнять значения в grid-template-areas. В нашем примере мы пробелами подравняли hd и ft , чтобы они коррелировали с main.
+
+Область, которую мы создаём подобными цепочками имён, должна быть прямоугольной. На данном этапе нельзя создать L-образную область. В спецификации говорится, что, возможно, в будущем подобная функциональность добавится. А сейчас мы можем охватывать строки так же легко, как и колонки. Например, давайте сделаем так, чтобы наш сайдбар простирался до конца футера. Для этого поменяем . на sd.
+
+.header {
+    grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+Copy to Clipboard
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd main main main main main main"
+      "sd sd sd  ft  ft   ft   ft   ft   ft";
+}
+Copy to Clipboard
+
+Значение grid-template-areas должно отображать законченный грид, а иначе оно невалидно (и игнорируется!). Это значит, что у вас должно быть одинаковое количество ячеек в каждой строке, а если какая-то ячейка должна быть пустой, то вместо имени в ней должна быть точка. Грид будет также невалидным, если области в нем не прямоугольные.
+
+Переопределение грида с медиавыражениями
+Поскольку наш макет теперь содержится в одной части CSS, вносить изменения для различных контрольных точек (breakpoints) становится крайне легко. Сделать это можно либо переопределив сам грид, либо положение элементов на гриде, либо и то, и другое одновременно.
+
+При этом определяйте имена для ваших грид-областей за пределами медиавыражений. В таком случае, область основного содержимого (content) всегда будет называться main независимо от того, где она находится на сетке.
+
+Мы можем теперь изменить наш макет для узкой ширины экрана на более простой, где все грид-области будут друг над другом в одном столбце.
+
+.header {
+    grid-area: hd;
+}
+.footer {
+    grid-area: ft;
+}
+.content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hd"
+      "main"
+      "sd"
+      "ft";
+}
+Copy to Clipboard
+Внутри медиавыражений мы переопределяем этот макет на двухколонный, а при увеличении свободного пространства — на трёхколонный. Обратите внимание, что для широкого макета я оставляю свою девятиколонную трековую сетку, а с помощью grid-template-areas я указываю куда стоит разместить грид-области.
+
+@media (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas:
+          "hd hd hd hd   hd   hd   hd   hd   hd"
+          "sd sd sd main main main main main main"
+          "sd sd sd  ft  ft   ft   ft   ft   ft";
+    }
+}
+@media (min-width: 700px) {
+    .wrapper {
+        grid-template-areas:
+          "hd hd hd   hd   hd   hd   hd   hd hd"
+          "sd sd main main main main main ft ft";
+    }
+}
+Copy to Clipboard
+
+Использование grid-template-areas для элементов UI
+Многие из примеров grid, которые вы найдёте в Интернете, предполагают, что вы будете использовать grid для макета главной страницы, однако grid может быть столь же полезна для небольших элементов. Использование grid-template-areas может быть особенно приятным, так как в коде легко видеть, как выглядит ваш элемент.
+
+В качестве очень простого примера мы можем создать «медиа-объект». Это компонент с пространством для изображения или другого носителя с одной стороны, а контент - с другой. Изображение может отображаться справа или слева от окна.
+
+На изображении показан простой пример «медиа-объекта»
+Наша сетка представляет собой двухколоночную трековую сетку, со столбцом для изображения размером 1fr и текстом 3fr. Если вы хотите область с фиксированной шириной изображения, тогда вы можете установить столбец изображения как ширину пикселя и назначить текстовую область 1fr. Одна колонка трека 1fr затем займёт оставшуюся часть пространства.
+
+Мы предоставляем области изображения имя области сетки img и содержимое текстовой области, затем мы можем выложить их, используя свойство grid-template-areas.
+
+* {box-sizing: border-box;}
+
+.media {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    max-width: 400px;
+}
+.media {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img content";
+    margin-bottom: 1em;
+}
+
+.media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
+Copy to Clipboard
+<div class="media">
+    <div class="image"></div>
+    <div class="text">This is a media object example.
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    </div>
+</div>
+Copy to Clipboard
+
+Отображение изображения с другой стороны окна
+Возможно, нам захочется отобразить нашу коробку с изображением наоборот. Для этого мы переопределим сетку, чтобы поместить последний трек 1fr и просто переверните значения grid-template-areas.
+
+* {box-sizing: border-box;}
+
+.media {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    max-width: 400px;
+}
+.media {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img content";
+    margin-bottom: 1em;
+}
+
+.media.flipped {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content img";
+}
+
+.media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
+Copy to Clipboard
+<div class="media flipped">
+    <div class="image"></div>
+    <div class="text">This is a media object example.
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    </div>
+</div>
+Copy to Clipboard
+
+Сокращения определения сетки
+Рассмотрев различные способы размещения элементов на наших сетках и многие свойства, используемые для определения сетки, самое время взглянуть на пару сокращений, доступных для определения сетки и многое из всего этого в одной строке CSS.
+
+Они могут быстро стать трудными для чтения для других 
+  
+
+
+
+
+
+  <script src="js/jquery.min.js"></script>
+
+
+  <script src="js/scroll.js"></script>
+
+
+</body>
+</html>

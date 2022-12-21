@@ -1,0 +1,69 @@
+/*                                    */
+
+/* задаем меню */
+
+nav {
+	background-color: rgba(6,6,6, 0.55); /*цвет меню */
+	border: 1px solid rgba(255,255,255,.5);	/* цвет линии обрамления*/
+	border-left: none;
+	border-right: none;
+    
+
+ /*Фиксирует позицию всегда сверху */
+	/*position: sticky;
+	top: 0;*/
+}
+/*убриаем все отступы*/
+nav ul {
+	padding: 0;
+	margin: 0;	
+  
+}
+
+/* меню li - выстроить по горизонтали*/
+
+nav li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+
+nav a {
+	float: left;
+	font-size: .8em;	
+	color: white; /* цвет букв */
+	font-weight: normal;
+	text-decoration: none;
+	padding: 10px;
+	border-right: 1px dashed rgba(255,255,255,.75); /* цвет разделителей  */
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+nav li:last-of-type a {
+	border-right: none;	
+}
+nav a:hover {
+	background-color: rgb(93,43,78);
+}
+
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/*
+.clear {
+	zoom: 1;
+  /* Фиксирует позицию всегда сверху */
+	/*position: sticky; /* Липкое позиционирование */
+	/*top: 0; /* Положение сверху */
+/*}
+
+
+
+
+
+/*                                    */
