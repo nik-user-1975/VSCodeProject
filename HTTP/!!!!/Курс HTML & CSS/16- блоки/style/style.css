@@ -1,0 +1,28 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+
+p{
+	width:50%; /* ширина*/
+	border: 1px solid red; /*обрамление*//**/
+	padding: 5px 10px; /*отступы*//**/
+	float: left;
+	box-sizing: border-box;
+
+}
+img{
+	float:right;
+	margin:30px;
+}
+div{
+	width:40%;
+	border: 1px solid grey;
+	min-height: 20px;
+	background: blue;
+	float: right;
+}
+p.test{
+	clear: both;
+}

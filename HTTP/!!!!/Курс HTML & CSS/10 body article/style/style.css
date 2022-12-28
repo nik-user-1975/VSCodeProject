@@ -1,0 +1,26 @@
+body
+{
+	background:#fffff1;
+	color: gray;
+	font-family: Calibri, sans-serif;
+}
+article
+{
+	max-width:900px; /* максимальная ширина */
+	/* margin создаёт пространство вокруг элемента */
+	/*margin-top (сверху), margin-right (справа), margin-bottom (снизу) или margin-left (слева*/
+	margin: 0 auto; /* Сверху и снизу | слева и справа: */ 
+	background:yellow;
+}
+.test
+{
+	background:white;
+}
+p span
+{
+	background: red;
+}
+p
+{
+	/*font-family: Calibri, sans-serif;*/
+}

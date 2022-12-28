@@ -1,0 +1,25 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+p.test
+{
+	padding:10px; /*внутренний отступ со всех четырех сторон*/
+	border:1px solid #f53;  /*solid  сплошная линия*/
+	margin: 20px; /* внешний отступ */
+}
+p.test2
+{
+	border:1px solid #f93;  /*solid  сплошная линия*/
+	padding:10px 15px 25px 2px; /*внутренний отступ со всех четырех сторон*/ /*по часовой с верху*/
+	margin: 30px 20px; /* внешний отступ (верх и низ - право и лево)*/
+}
+p.test2 strong{
+	border: 2px solid #693; /*solid  сплошная линия*/
+	margin-top: 30px; /*отступ в строчном элементе не работает*/
+	display: inline; /* отступ для margin-top */
+}
+li{
+	display: inline; /*выстроит в горизонтальную линию*/
+}

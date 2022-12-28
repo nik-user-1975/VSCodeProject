@@ -1,0 +1,132 @@
+/*@import url("ya-poisk.css");*/
+/*  start pass */  
+.wrapper {	}
+.wrapper.hidden {
+	display: none;
+}	
+
+/* end pass */
+  
+  /* начало яндекс поиска */
+  
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* конец кода сброса стилей браузера */
+
+.div-ya{
+	padding-top:50px;
+	margin-bottom:20px;
+	
+}
+
+.ya{
+	border: 1px solid #fc0;
+	border-radius: 10px; /*закруглить углы*/
+	/*margin:10px;*/
+	padding: 2px;
+	/*width:750px; /* длинна обрамления */
+	width:705px;
+	
+	}
+.ya input placeholder{
+/*	width: 500px;*/
+	
+}
+.ya .yan/*[name="text"]*/
+{
+	/*width:600px; /* длинна поиска  */
+	width:600px;
+	font-size: 1.2em;
+	/* начало делаем линии прозрачными */
+	background: transparent;
+    border: none;
+	/* конец делаем линии прозрачными */
+	}
+.ya .yan:active,
+.ya .yan:hover,
+.ya .yan:focus
+{
+		/* начало делаем линии прозрачными */
+	outline: 0;
+	outline-offset: 0;
+}
+/* Первая буква абзаца*/
+.h1ya:first-letter{
+	font-size: 60px;
+	font-style:italic;
+	color: red;
+}
+.button-ya{
+	width: 100px;
+	height:30px;
+	border-radius: 10px; /*закруглить углы*/
+	border:none; /* уберем бордюр border */
+	background:#fc0;
+	/*color: white;*/
+	
+}
+/* конец яндекс поиска */
+
+/*     ********************************************     */
+
+.par{
+	display:flex;
+	justify-content:center;
+	
+}
+.paren{
+	display:inline-flex;
+	align-items:center;
+	flex-direction:column;
+}
+.parent {
+  display:flex;
+  justify-content:center;
+  /*border:2px solid #FF8C00;*/
+  padding:20px;
+  width:750px;
+  gap:10px;
+  
+}
+.child {
+  background-color:#ededed;
+  border:2px solid #768D44;
+  /*padding:30px;
+  margin:10px;*/
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 0.6em;
+  border-radius: 10%;
+  text-decoration: none;
+}
+.child a{
+  text-decoration: none;
+  color: #000;
+}
+/*.ais{
+  font-size: 2.5em;
+  text-decoration: none;
+}
+*/
+.pkpvd{
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+  .img-a{
+    width: 50px;
+    height: 50px;
+    /*border-radius: 50%*/
+}
+
+/*подвал*/
+footer {
+
+position: fixed; /* фиксированная позиция */  
+}
+  

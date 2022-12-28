@@ -1,0 +1,66 @@
+﻿/*убираем отступы, занимаем весь экран*/
+html, body { margin:0; height: 100%; }
+
+.clear ul{
+	 list-style-type: none;  /* убираекм точки */
+	 /*убриаем все отступы*/
+	padding: 0;
+	margin: 0 auto;
+
+}
+ .clear li {
+        float: left; /* высмтроить по горизонтали */
+	
+ }
+ /*создаем линию серую 30px*/
+ .clear {
+        height: 35px;
+        background-color: #666;
+        padding-left: 100px;
+		/*padding: center;*/
+        min-width: 470px;
+			
+      }
+	  
+.clear a {
+	float: left;
+	font-size: .8em;	 /* размер шрифта */
+	color: white; /* цвет букв */
+	font-weight: normal;
+	text-decoration: none; /* убрать подчеркивание */
+	padding: 10px; /*отступы */
+	border-right: 1px dashed rgba(255,255,255,.75); /* цвет разделителей пунктиром */
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	/*margin:5px; /* растояние между кнопками*/
+
+}
+/*цвет при наведении*/
+.clear a:hover {
+	background-color: rgb(93,43,78);
+}
+
+header {
+	background-color:rgb (93,43,78); 
+	/*цвет заливки*/
+	background-image: linear-gradient(to right, #7C4700, white);
+	/*background-image: -webkit-linear-gradient(right, rgb(93,43,78), rgb(8,2,50));*/
+	padding-bottom: 30px;
+	/*border: solid 1px rgb(0, 9 ,0); /*линия solid-сплошная*/
+	/*лшиния с низу*/
+	border-bottom-style: solid;
+	border-bottom-width: 1px; /* Толщина линии внизу */
+
+}
+/* прижать footer к низу экрана*/
+
+
+
+
+.footer {
+	 
+	position: absolute;
+	bottom: 0;
+}

@@ -1,0 +1,55 @@
+﻿*{
+	margin:0;
+	padding:0;
+}
+.menu{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	height: 50px;
+}
+.header-logo{
+	padding-left:10px;
+}
+ul {
+  padding-right:10px;
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  display:flex;
+  
+  
+ 
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  /*font-weight: bold;*/
+  font-size: 1.2em; /*размер шрифта */
+  color: gray; /* цвет букв серый  */
+  
+  
+}
+li {
+  /*float:left; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:15px; /*Добавляем отступ у пунктов меню*/
+  width: 150px; /* ширина кнопок */
+  text-align:center; /* текст по центру */
+  border: 1px solid #dcdcdc; /* рамка покруг кнопки */
+  border-radius: 10px; /* закругление углов книпки */
+  padding: 5px; /* внутреннийц отступ */
+   
+}
+/* при наведение мышью */
+
+
+a:hover{
+	font-size: 1.3em; 
+    /*font-weight: bold;*/
+	 
+}
+li:hover  {
+	 box-shadow: 0 0 22px #dcdcdc; /* подсветка вокруг кнопки */
+}
+

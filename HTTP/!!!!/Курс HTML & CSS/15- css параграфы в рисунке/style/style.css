@@ -1,0 +1,52 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+p.test
+{
+	/*padding:10px; /*внутренний отступ со всех четырех сторон*/
+	border:1px solid #f53;  /*solid  сплошная линия*/
+	
+	/*margin: 20px; /* внешний отступ */
+}
+p.test2
+{
+	border:1px solid #693;  /*solid  сплошная линия*/
+	background: red; /* закрасить абзац */
+	
+	border-radius: 20px 30px 40px 15px; /* скругление углов лево, право - право низ, лево низ  (40px/10px в бок/ низ)*/
+	padding: 5px; /* отступы от границы*/
+	/*padding:10px 15px 25px 2px; /*внутренний отступ со всех четырех сторон*/ /*по часовой с верху*/
+	/*margin: 30px 20px; /* внешний отступ (верх и низ - право и лево)*/
+	
+	width: 20%; /* ширина 50% (50px 50em)браузера*/
+	/*height:200px; /* высота */
+	mix-height:600px; /* минимальное значение высоты*/
+	
+	overflow: auto; /* scroll - прокрутка */
+}
+
+p{
+	/* тень  */
+	box-shadow: 4px 4px 11px rgba(0, 4, 0, .7); /*горизонт   вертикаль размытие */ /*inset тень идет в нутрь*/
+}
+h2{
+	width:300px; /* ширина*/
+	padding: 15px; /*внутренние отступы*/
+	border-width: 5px;
+	margin: 10px; /* внешние отступы */
+	border: 1px solid #888; /* делаем обрамление */
+	box-sizing: border-box; /*задействует все границы*//* content-box padding-box*/
+}
+
+
+
+p.test2 strong{
+	border: 2px solid #693; /*solid  сплошная линия*/
+	margin-top: 30px; /*отступ в строчном элементе не работает*/
+	display: inline; /* отступ для margin-top */
+}
+li{
+	display: inline; /*выстроит в горизонтальную линию*/
+}

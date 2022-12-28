@@ -1,0 +1,41 @@
+/*class="button"*/
+a.button
+{
+	border: solid 1px rgb(0, 9 ,0); /*линия solid-сплошная*/
+	background-color: rgb(50, 50, 50); /* цвет фона */
+	color: #fff; /*цвет букв*/
+	padding: 4px;
+	border-radius: 7px; /*скругление углов*/
+	text-decoration: none; /*уберет подчеркивание*/
+	font-size: 1.3em; /* размер шрифта */
+	
+}
+
+/* При наведении мышкой */
+a.button:hover{
+	border: solid 1px rgb(123, 9 ,123); /*линия solid-сплошная*/
+	background-color: rgb(222, 222, 222); /* цвет фона */
+	color:#000; /*цвет букв*/
+	padding: 4px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+/*изменяет картинку при наведение мыши на ссылке*/
+
+span.button2{
+	position: relative;
+	background-position: left top;
+	width: 25px;
+	height: 34px;
+	background-image: url(../images/nav.png);
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	display: inline-block;
+}
+span.button2:hover{
+	background-position: left top -34px;
+	cursor: pointer;
+	background-origin: content-box;
+}

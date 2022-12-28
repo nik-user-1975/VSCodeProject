@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Работа с таблицами</title>
+    <!--
+	<link href="css/minimal-table.css" rel="stylesheet" type="text/css">
+	-->
+  </head>
+  <body>
+    <h1>Строим нашу первую тблицу</h1>
+      <table  border="1">
+	  <colgroup>
+	  <!--ячейки для цвета-->
+	  <col>
+	  <col>
+	  <col style="background:red;">
+	  </colgroup>
+        <tr  style="background:yellow;">
+		<!--
+		th заголовок
+		colspan - объеденить ячейки в строке
+		rowspan - оюъединяет ячейки в колонке
+		-->
+          <th>Первая ячейка</th>
+           <th  >Вторая2ячейка</th>
+           <th>Третья ячейка</th>
+        </tr>
+        
+        <tr>
+          <td colspan="2">Первая ячейка</td> <!-- Атрибут задает количество присоединенных справа ячеек -->
+           <!--<td>Вторая ячейка</td>-->
+           <td>Третья ячейка</td>
+        </tr>
+          <td>Первая ячейка</td>
+           <td>Вторая ячейка</td>
+           <td rowspan="2"> Третья ячейка</td>
+        </tr>
+         </tr>
+          <td>Первая ячейка</td>
+           <td style="background:green;">Вторая ячейка</td>
+           <!--<td>Третья ячейка</td>-->
+        </tr>
+      </table>
+
+  </body>

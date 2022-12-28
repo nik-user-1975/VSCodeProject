@@ -1,0 +1,80 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+}
+
+/* конец кода сброса стилей браузера */
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+.ya{
+	border: 1px solid #fc0;
+	border-radius: 10px; /*закруглить углы*/
+	/*margin:10px;*/
+	padding: 2px;
+	/*width:750px; /* длинна обрамления */
+	width:705px;
+		
+}
+.ya input placeholder{
+/*	width: 500px;*/
+	
+}
+.ya .yan/*[name="text"]*/
+{
+	/*width:600px; /* длинна поиска  */
+	width:600px;
+	font-size: 1.2em;
+	/* начало делаем линии прозрачными */
+	background: transparent;
+    border: none;
+	/* конец делаем линии прозрачными */
+	}
+.ya .yan:active,
+.ya .yan:hover,
+.ya .yan:focus
+{
+		/* начало делаем линии прозрачными */
+	outline: 0;
+	outline-offset: 0;
+}
+/* Первая буква абзаца*/
+h1:first-letter{
+	font-size: 60px;
+	font-style:italic;
+	color: red;
+}
+button{
+	width: 100px;
+	height:30px;
+	border-radius: 10px; /*закруглить углы*/
+	border:none; /* уберем бордюр border */
+	background:#fc0;
+	/*color: white;*/
+	
+}
+.inline-flex {
+	display: flex; /* блочный флекс контейнер */
+	margin: 3px; /* внешние отступы со всех сторон */
+
+}
+div > div {
+	width: 100px; /* ширина элемента */
+	height: 100px; /* высота элемента */
+	background: orange; /* цвет заднего фона */
+	margin: 3px; /* внешние отступы со всех сторон */
+}
+a{
+	text-align:	center;
+	display:block;
+}
+span{
+	font-size: 0.7em;
+}
+img{
+	border-radius:50%;
+}
+
+
+

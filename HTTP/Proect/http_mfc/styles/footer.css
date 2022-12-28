@@ -1,0 +1,22 @@
+/* сбросить оптикание к подвалу*/
+footer{
+	clear: both;
+}
+/*подвал*/
+footer {
+	/*margin-top: 15px;
+	font-size: .8em;	
+	padding: 10px 10px 30px 10px;
+	background-color: black;
+	color: rgb(204,204,204);
+	text-align:center;
+	*/
+/*	position: fixed; /* фиксированная позиция */
+bottom: 0; /* с низу отступ */
+left: 0; /* с лева отступ */
+right: 0; /* с права отступ */
+padding: 10px; /* отступ внутри */
+background-color: rgb(87, 86, 86);/*black; /* цвект фона */
+color: white; /* цвет букв */
+text-align:center;
+}

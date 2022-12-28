@@ -1,0 +1,51 @@
+﻿/* Сбрасываем стили: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*убираем отступы, занимаем весь экран*/
+/*
+html, body { margin:0; height: 100%; }
+*/
+.header
+{
+	background: #F5DEB3;
+	 /*width: 100%;*/
+	    height: 55px;
+}
+
+.navigation
+{
+	 background: #FE9798;
+     width: 100%;
+     height: 25px;
+}
+.sidebar
+{
+	background: #40E0D0; /*цвет*/
+	float:left; /*от куда позиция */
+	width:20%; /*занимает 20% экрана слева*/
+	height: 280px; /* в низ*/
+	/*height: 100vh;*/
+	
+	
+	
+}
+.content
+{
+	  background: #DCDCDC;
+	  float: right;
+     width: 80%;
+     height: 280px;
+}
+
+/* прижать footer к низу экрана*/
+.footer {
+	   background: #00BFFF; 
+	   width: 100%;
+	position: absolute;
+	bottom: 0;
+	
+}

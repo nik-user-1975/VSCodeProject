@@ -1,0 +1,80 @@
+﻿ *{
+  margin: 0;
+  padding: 0;
+}
+/*задаем фон, с верху делаем отступы в 100 пик. и ширину на весь экран.*/
+.dws-menu{
+ background-color: white;
+ margin-top: 100px;
+ width: 100%;
+ 
+}
+/* выстраиваем списки горизонтально */
+ul.dws-ul{
+ display: flex;
+ padding: 0;
+ justify-content: center;
+ list-style-type:none;
+ 
+}
+
+/* убираем маркер и делаем отступ со всех сторон в 10 пик. */
+li.dws-li a{
+ text-decoration: none;
+ font-size: 18px;
+ color: #000;
+ /*---------------------------------------- */
+ margin-right: 20px;*/
+ 
+ }
+/* Иконку немного сдвинем правее */
+li.dws-li a i{
+ margin-right: 10px;
+}
+/*--------------------------------------------------------------------*/
+/*                    Анимация при наведении                          */
+/*--------------------------------------------------------------------*/
+
+li.dws-li a{
+
+ position: relative;
+}
+
+li.dws-li a::before{
+
+ position: absolute;
+ top: 100%;
+ left: 0;
+}
+/* красная линия с права внизу */
+li.dws-li a::after{
+ content: '';
+ width: 20px;
+ height: 3px;
+ background-color: #ff2117;
+ position: absolute;
+ top: 100%;
+ right: 0;
+}
+/* делаем анимацию при наведении */
+li.dws-li:hover{
+ /*background-color: #e5eae8;*/
+  color: #e62117;
+  border-bottom: 2px solid green;
+}
+/* при наведении и добавляем к ним псевдоэлемент с шириной в 50% и задаем трансформацию по оси Х с лева на право */
+li.dws-li:hover a:before{
+ width: 50%;
+ transform: translateX(100%);
+ /* плавный переход и изменим режим наложения слоев */
+  transition: .5s;
+ mix-blend-mode: multiply;
+}
+/* при наведении и добавляем к ним псевдоэлемент с шириной в 50% и задаем трансформацию по оси Х с лева на право */
+li.dws-li:hover a:after{
+ width: 50%;
+ transform: translateX(-100%);
+  /* плавный переход и изменим режим наложения слоев */
+  transition: .5s;
+ mix-blend-mode: multiply;
+}

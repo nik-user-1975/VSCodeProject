@@ -1,0 +1,49 @@
+﻿a{
+	text-decoration:none;/* убриет подчеркивание ссылки*/
+}
+a:hover{
+	color:red;
+	text-decoration:underline;/*подчеркивается при наведенеие на ссылку*/
+
+}
+/*увеличивает при нажатии*/
+a:active{
+	font-size: 20px;
+	color:red;
+}
+a:link{
+	color:green;
+}
+a:visited{
+	color: grey;
+}
+/* Первая буква абзаца*/
+p:first-letter{
+	font-size: 30px;
+	color: red;
+}
+/* первая строчка абзаца*/
+p:first-line{
+	font-weight: bold;
+}
+input:focus{
+	background: #fffccc;
+	border-color: red;
+}
+/*начало*/
+.test:before
+{
+	content:"Ура!!! ";
+}
+/*в конце*/
+.test:after
+{
+	content:"Окончание!!!";
+	color:red;
+}
+/*для выделения*/
+p::selection
+{
+	color:#fff;
+	background:black;
+}

@@ -1,0 +1,23 @@
+header {
+	margin: 0 auto
+	background-color:rgb (93,43,78); 
+	/*цвет заливки*/
+	background-image: linear-gradient(to right, #7C4700, white);
+	/*background-image: -webkit-linear-gradient(right, rgb(93,43,78), rgb(8,2,50));*/
+	padding-bottom: 150px;
+	/*border: solid 1px rgb(0, 9 ,0); /*линия solid-сплошная*/
+	/*лшиния с низу*/
+	/*border-bottom-style: solid;
+	border-bottom-width: 1px; /* Толщина линии внизу */
+
+}
+/*
+header h1 {
+	font-size: 3em;	
+	color: white;
+	font-weight: bold;
+	padding-top: 30px;
+	clear: both;
+	padding-left: 10px;
+}
+/*Двигаем на ширину монитора 1200*/

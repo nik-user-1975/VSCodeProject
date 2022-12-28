@@ -1,0 +1,17 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+	/*background-image: url(../images/fon.jpg);*/
+	background-image: url(../images/fon.jpg), url(../images/1.png); /* накладывается первая катринка на вторую*/
+	/*background: url(../images/fon.jpg) center center / 20% no-repeat fixed #ff5; /*всегда по центру*/
+	background-repeat: no-repeat; /* чтобы изображение не повторялось*/
+		/*background-position:center top; /* где будет изображение */
+		/*background-position: 500px 200px;*/
+	/*background-repeat: repeat-x; /*позиция по верху*/
+	/*background-attachment: fixed; /*фиксируется*/
+	/*background-origin: padding-box;/* от куда будет начинаться фоновое изображение*/
+	
+	
+		
+}

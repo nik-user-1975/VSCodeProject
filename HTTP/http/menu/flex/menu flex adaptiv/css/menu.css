@@ -1,0 +1,78 @@
+﻿ *{
+  margin: 0;
+  padding: 0;
+}
+.header {
+  border: 2px solid #ccc;
+  display: flex;
+  flex-wrap: wrap; /*перенос строки */
+  justify-content: space-between; /*прижимает содержимое к краям */
+  align-items: center; /*выравнивает элементы по центру на вертикальной */
+}
+
+.header .logo {
+  padding-left: 30px;
+  
+}
+.logo-img{
+	width:100px;
+}
+
+.header .menu ul {
+  display: flex;
+  list-style: none;
+  
+}
+
+.header .menu ul li {
+  margin: 20px 0 20px 0px;
+      
+}
+/* убираем маркер и делаем отступ со всех сторон */
+li.dws-li {
+ list-style: none;
+ padding: 10px;
+}
+
+.header .menu ul a {
+  /*text-transform: uppercase; /* превод в верхний регистр букв ( все большие )*/
+  text-decoration: none; /* убираем подчеркивание */
+  font-weight: bold;
+  padding: 10px;
+  color: black;
+}
+
+/*  Иконку немного сдвинем правее  */
+li.dws-li a i{
+ margin-right: 10px;
+}
+.header .menu ul a:hover{
+ background-color: #e5eae8;
+ 
+}
+
+.phone {
+  font-size: 110%;
+  color: #333;
+  padding-right: 40px;
+}
+/* ------------------------------------------- */
+/*           меню под размер экрана            */
+
+ @media screen and (max-width: 900px) {
+  .phone {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header  {
+    flex-direction: column;
+  }
+  .header .menu ul {
+    flex-direction: column;
+    align-self: center;
+  }
+  .header .menu ul li {
+    margin: 5px;
+  }
+}

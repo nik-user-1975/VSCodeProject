@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<style>
+/* правило будет применяться если минимальная ширина будет составлять 768 px */
+	@media(min-width: 768px){ /*минимальная ширина 768 */
+		.main{
+			display: flex; /* по горизонтали */
+			/*display: block;*/ /* по вертикали */
+			/*align-items: flex-start; /* высота колонок вверх*/
+			/* align-items: flex-end; /* высота колонок вниз*/
+			/* align-items: center; /* высота колонок центр */
+			/* flex-direction: column; /* вертикальное выравнивание */
+		}
+		.main-2{
+			display: flex; /* по горизонтали */
+			justify-content: space-around; /* одинаковое растояние между блоками */ /* рыровнять по ширине space-between*/
+		}
+		.boxes{
+		width: 28%; /* ширина блоков второго ряда*/
+		}
+	}
+/* конец правила минимальной ширины */
+
+	.main div, .main-2 div{
+		border: 1px solid #234cc2;
+		padding: 12px;
+	}
+	.box-1{
+		flex:1;
+		order:3; /* отображениепо порядку 3 */
+	}
+	.box-2{
+		flex:2; /* размер бокса */
+		order:1; /* отображениепо порядку 1 */
+	}
+	.box-3{
+		flex:1;
+		order:2; /* отображениепо порядку 2 */
+	}
+	
+</style>
+
+<div class="main">
+	<div class="box-1">
+		<h2>Box one</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+	</div>
+	<div class="box-2">
+		<h2>Box two</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+
+	</div>
+	<div class="box-3">
+		<h2>Box three</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+	</div>
+</div>
+
+<div class="main-2">
+	<div class="boxes">
+		<h2>Box four</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+	</div>
+	<div class="boxes">
+		<h2>Box five</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+
+	</div>
+	<div class="boxes">
+		<h2>Box six</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet recusandae nihil, at, maxime veniam natus. Minus vero qui maxime, unde vel perferendis iure doloremque beatae repellendus! Repellat fugit sapiente autem.</p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+h1{
+	font-family:Arial, Helvetica, Verdana;
+}
+p{
+	font-size: 1.2em; /*размер шрифта*/
+	/*font-style: italic; /* шрифт курсив normal*/
+	font-family:'Pacifico', cursive; /* Устанавливаем шрифт, курсивным*/
+	/*color: #f34;
+	background:#011;
+	/*text-transform: uppercase; /* все большие буквы */	
+	/*text-transform: none; /*простой шрифт*/
+	/*font-variant: small-caps; /* начало предложения буква больше чем остальные*/
+	/*text-decoration: underline; /*подчеркнутый для ссылок*/
+	letter-spacing: 1px;/* растояние между символами - буквами*/
+	word-spacing:2px /* растояние между словами*/
+}
+a{
+	text-decoration:none;/* убриет подчеркивание ссылки*/
+}
+a:hover{
+	text-decoration:underline;/*подчеркивается при наведенеие на ссылку*/
+}

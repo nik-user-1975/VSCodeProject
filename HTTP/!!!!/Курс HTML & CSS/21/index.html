@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Наследование CSS</title>
+	<!--
+	<link href="style/reset.css" rel="stylesheet" type="text/css">
+	-->
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <!-- 
+  часть контента, которая имеет свой заголовок и содержание,
+  -->
+  <article>
+  <h1>Форма ученика HTML</h1>
+  <!-- 
+  method="post"  серверная часть
+  action="/" говорит куда идти данным с формы 
+  -->
+  <form method="post" action="" class="subform">
+			<p>
+				<label for="name">Как вас зовут?</label>
+				<input type="text" name="name" id="name">
+			</p>
+			<p>
+				<label for="email">Введите вашу почту</label>
+				<input type="email" name="email" id="email">
+			</p>
+			<p>Есть опыт изучени:
+				<label>
+					<input type="radio" name="skill" value="1">
+					JavaScript
+				</label>
+				<label>
+					<input type="radio" name="skill" value="2">
+					HTML & CSS
+				</label>
+				<label>
+					<input type="radio" name="skill" value="3">
+					PHP
+				</label>
+			</p>
+			<p>
+				<label for="goal">Какую цель преследую:</label>
+				<select name="goal" id="goal">
+					<option>Хочу сменить профессю</option>
+					<option>Повысить скилл</option>
+					<option>Как хобби</option>
+					<option>Хочу быть фрилансером</option>
+				</select>
+			</p>
+			<p>
+				<label for="comments">Ваше пожелание</label>
+				<textarea name="comments" cols="40" rows="5" id="comments">
+				</textarea>
+			</p>
+			<p>
+				<input type="submit" value="Отправить">
+			</p>
+		</form>
+  </article>
+  </body>
+</html>

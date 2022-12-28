@@ -1,0 +1,28 @@
+#test1 {
+  background:red; 
+  }
+  p
+  {
+  background:yellow;
+  }
+  .test
+  {
+  background:blue;
+  }
+  h1.test
+  {
+  background:gray;
+  }
+  .test .test2
+  {
+  background:#ffffff;
+  }
+  .one
+  {
+	  font-weight:bold;	  
+  }
+  h2
+  {
+	text-align: center;  
+  }
+ 

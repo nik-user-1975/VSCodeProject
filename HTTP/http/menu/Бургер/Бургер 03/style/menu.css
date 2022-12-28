@@ -1,0 +1,126 @@
+﻿.navega_kilasmub{
+  position: relative;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #ecf0f3;
+  padding: 12px;
+  box-shadow: -3px -3px 7px #f5f1f1,
+  3px 3px 5px #ceced1,
+  inset -3px -3px 7px #f5f1f1,
+  inset 3px 3px 5px #c2c2c9;
+  transition: all 0.3s ease;
+}
+.navega_kilasmub .ulopan{
+  display: flex;
+  justify-content: space-evenly;
+}
+.navega_kilasmub .ulopan .logo{
+  font-size: 27px;
+  font-weight: 600;
+  color: #31344b;
+}
+.navega_kilasmub ul{
+  margin-top: 35px;
+  list-style: none;
+}
+.navega_kilasmub ul a{
+  color: #31344b;
+  text-decoration: none;
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  padding : 10px 25px;
+  border-radius: 6px;
+  box-shadow: -3px -3px 7px #f5f1f1,
+  3px 3px 5px #c2c2c9;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.navega_kilasmub ul i{
+  margin-right: 10px;
+}
+.esanulas_nugasub{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.esanulas_nugasub a{
+  position: relative;
+  margin: 0 4px;
+  font-size: 17px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  box-shadow: -3px -3px 7px #f5f1f1,
+  3px 3px 5px #c2c2c9;
+  transition: all 0.3s ease;
+}
+.navega_kilasmub ul a:hover:before,
+.esanulas_nugasub a:hover:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset -3px -3px 7px #f5f1f1,
+  inset 3px 3px 5px #c2c2c9;
+}
+.navega_kilasmub ul a:hover:before{
+  border-radius: 6px;
+}
+.esanulas_nugasub a:hover:before{
+  border-radius: 50%;
+}
+.navega_kilasmub ul a:hover{
+  color: #3498db;
+}
+
+.esanulas_nugasub a:nth-child(1){
+  color: #4267b2;
+}
+.esanulas_nugasub a:nth-child(2){
+  color: #1da1f2;
+}
+.esanulas_nugasub a:nth-child(3){
+  color: #e1306c;
+}
+.esanulas_nugasub a:nth-child(4){
+  color: #ff0000;
+}
+label{
+  font-size: 17px;
+  color: #31344b;
+  box-shadow: -3px -3px 7px #f5f1f1,
+  3px 3px 5px #c2c2c9;
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+label:hover{
+  box-shadow: inset -3px -3px 7px #f5f1f1,
+  inset 3px 3px 5px #c2c2c9;
+  color: #3498db;
+}
+#check{
+  display: none;
+}
+.bars{
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+#check:checked ~ .navega_kilasmub{
+  left: 0;
+}

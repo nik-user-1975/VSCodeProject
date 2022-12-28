@@ -1,0 +1,70 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+
+
+div.header{
+	width:100%;
+	/*background: black;*/
+	border: 1px solid red;
+		min-height: 100px;
+}
+
+      
+
+div.test65{
+	width:65%;
+		min-height: 400px;
+	border: 1px solid grey;
+	/*min-height: 20px;*/
+	background: blue;
+	float: left;	
+		box-sizing: border-box;
+}
+
+div.test35{
+	width:35%;
+		min-height: 400px;
+	border: 1px solid blue;
+	float: left;
+	background: red;
+	float: left;
+	box-sizing: border-box;
+}
+
+div.test1{
+	width: 33.3%;
+	min-height: 200px;
+	border: 1px solid red;
+	padding: 5px 10px;
+	float: left;
+	box-sizing: border-box;
+	background: yellow;
+}
+div.test2{
+	width: 33.3%;
+	min-height: 200px;
+	border: 1px solid red;
+	padding: 5px 10px;
+	float: left;
+	box-sizing: border-box;
+	background: yellow;
+}
+div.test3{
+	width: 33.3%;
+	min-height: 200px;
+	border: 1px solid red;
+	background: yellow;
+	padding: 5px 10px;
+	float: left;
+	box-sizing: border-box;
+}
+div.futer{
+	width:100%;
+	min-height: 100px;
+	background: grey;
+	border: 1px solid grey;
+	
+}

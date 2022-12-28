@@ -1,0 +1,45 @@
+p{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; /* используемые шрифты */
+	font-size: 1em; /* размер шрифта */
+	line-height: 2.0; /* межстрочный интервал */
+	text-align: justify; /* justify - на всю ширину */
+	text-indent: 1.5em; /* Красная строка - отступ и только для первой строки каждого абзаца*/
+
+	/*text-transform: uppercase; /* uppercase - изменения всех букв на заглавные */
+	/* text-transform: capitalize; /* каждое слово будет начинаться с заглавной буквы */
+}
+/* Первая буква абзаца*/
+p:first-letter{
+	font-size: 30px;
+	color: red;
+}
+/* первая строчка абзаца*/
+p:first-line{
+	font-weight: bold;
+}
+/*начало*/
+.test:before
+{
+	content:"Ура!!! ";
+}
+/*в конце*/
+.test:after
+{
+	content:"Окончание!!!";
+	color:red;
+}
+/*для выделения*/
+p::selection
+{
+	color:#fff;
+	background:black;
+}
+
+footer {
+position: fixed; /* фиксированная позиция */
+bottom: 0; /* с низу отступ */
+left: 0; /* с лева отступ */
+right: 0; /* с права отступ */
+padding: 10px; /* отступ внутри */
+background-color: black; /* цвект фона */
+color: white; /* цвет букв */

@@ -1,0 +1,96 @@
+﻿body 
+{
+	/*20 px с четырех сторон*/
+	padding: 60px;
+	/* background-image: linear-gradient(to right, blue, white); /* по направлению в правую сторону */
+		
+}
+p.test1
+{
+width: 500px;
+	border: 1px solid #003;
+	padding: 3px;
+	/*transform: scale(1);		*/
+	transform: rotate(12deg); /* повернуть на 12 градусов */
+	/*
+	-webkit-transform: rotate(10deg); 
+	-ms-transform: rotate(10deg); 
+	transform: rotate(10deg); 
+	*/
+}
+/* CSS кнопка */
+a.button
+{
+	border: solid 1px rgb(0, 9 ,0); /*линия solid-сплошная*/
+	background-color: rgb(50, 50, 50); /* цвет фона */
+	color: #fff; /*цвет букв*/
+	padding: 4px;
+	border-radius: 7px; /*скругление углов*/
+	text-decoration: none; /*уберет подчеркивание*/
+	font-size: 1.3em; /* размер шрифта */
+	transition-duration: 1s, 1s, 2s;
+	transition-delay: 0, 0, 1s;
+	
+}
+
+/* При наведении мышкой */
+a.button:hover{
+	border: solid 1px rgb(123, 9 ,123); /*линия solid-сплошная*/
+	background-color: rgb(222, 222, 222); /* цвет фона */
+	color:#000; /*цвет букв*/
+	padding: 4px;
+	border-radius: 7px; /*скругление углов*/
+	text-decoration: none;
+	font-size: 1.3em;
+	/*transition-duration: 1s, 1s, 2s; /* замендляет */
+	/*transition-delay: 0, 0, 1s;
+	/*
+	display:inline-block;
+	-ms-transform: scale(10); 
+	/*
+}
+/* кнопка ссылки с рисунком*/
+
+span.button2
+{
+	position:relative; /* позиционирование*/
+	background-position: left top; /* выравнивать по левому и верхнему краю*/
+	width: 25px; /*ширина*/
+	height: 34px; /*высота*/
+	background-image: url(../images/nav.png);
+	background-repeat: no-repeat; /* не будет повторов*/
+	background-origin: content-box; /* определяет как позиционируется фоновое изображение/-я :  от верхнего левого угла содержимого элемента*/
+	display: inline-block; /* чтобы увидели изображение */
+}
+span.button2:hover{
+	background-position: left top -34px; /* выравнивать по левому и верхнему краю -34(опустить рисунко ниже на 34)*/
+	cursor: pointer;
+	background-origin: content-box;  /* определяет как позиционируется фоновое изображение/-я :  от верхнего левого угла содержимого элемента*/
+}
+
+
+/*меню */
+
+ul.nav{
+	list-style-type: none; /*не отоброжать точку*/
+	/* удалить отступы */
+	margin-left: 0px; 
+	padding-left: 0px;
+}
+
+ul.nav li{
+	display: inline; /* выстроить в линию */
+}
+
+ul.nav a{
+	display: inline-block; /* делаем блочныым элементом ссылку*/
+	border:1px dashed #000; /* линия */
+	padding: 5px 10px; /*  */
+	background: #1a1a1a; /* цвет кнопки */
+	text-decoration: none; /*уберет подчеркивание*/
+	color: #f33; /*  */
+	border-radius: 4px; /*скругление углов*/
+	/*line-height: 1.5em; /* расстояние между ссылками высота - для вертикали*/
+	font-size: 1.3em; /* размер шрифта */
+	margin:2px; /* растояние между кнопками*/
+}

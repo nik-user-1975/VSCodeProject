@@ -1,0 +1,16 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 60px;
+	/* background-image: linear-gradient(to right, blue, white); /* по направлению в правую сторону */
+		
+}
+p.test{
+background-image: linear-gradient(yellow, transparent),
+						linear-gradient(120deg, green, transparent),
+						linear-gradient(200deg, blue, transparent);
+}
+p.test1{
+	background-image: radial-gradient(circle at 3% 50%, red, blue);
+				
+}

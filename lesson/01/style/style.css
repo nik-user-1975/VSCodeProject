@@ -1,33 +1,17 @@
-li:nth-of-type(2){
-  color:red;
-
+body{
+	background:gray;
+	
 }
-div ul li:last-of-type{
-  color:green;
-}
-div{
-  border: 1px solid red;
-}
-#A{
-  border: 1px solid red;
-
-/*  width: 100px;*/
-  top: 25px;
-  left: 100px;
-}
-
-.container {
-  display: grid;
-  /*grid-template-columns: repeat(auto-fill, minmax(280px, 280px));*/
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 18px;
-  grid-row-gap: 20px;
-  border: 1px solid red;
-  justify-content: center;
-}
-
-.children {
-  width: 280px;
-  height: 280px;
-  background-color: black;
+h1{
+	font-size:2em;
+	color: blue;
+	
+	 margin: 0;
+	 position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	
+	
 }

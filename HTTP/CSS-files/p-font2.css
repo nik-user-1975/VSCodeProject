@@ -1,0 +1,35 @@
+body 
+{
+	/*20 px с четырех сторон*/
+	padding: 20px;
+}
+h1{
+	text-shadow: -3px 5px 2px #999; /* тень*/
+	/*text-shadow: -3px 5px 2px #999; // Горизонталь, вертикаль, глубина размытия и цвет
+	/* горизонтальное вертикальное (степерь размытости тени) цвет */
+	text-align: center;
+}
+p{
+	
+	line-height: 150%; /* расстояние между строчками */
+	text-align: justify; /*left по умолчанию с левой тороны, right - выравнивание по правому краю, justify - выравнивание по обем сторонам равномерно*/
+	text-indent: 25px; /* отступы параграфа - красная строка */
+	border: 1px solid #987; /* рамочка вокруг обзаца */
+	margin-top: 20px; /*отступы межу абзацами*/
+	padding-bottom: 30px; /* отступ в низу абзаца к линии*/ 
+}
+
+h2:first-letter/**/
+{
+	font-size: 40px;
+	font-weight: bold;
+	background: #000; /*цвет вокруг буквы*/
+	color:#fff; /*цвет буквы белый*/
+	padding: 4px; /* размер рамки во круг буквы*/
+}
+ol{
+	
+	list-style-position: inside; /* изменяет внешний вид*/
+	 border: 1px solid #987; /*рамка во круг*/
+	 /*list-style-image: url(../images/1.png);*/ /*картинка вместо символов*/
+}

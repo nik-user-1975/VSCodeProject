@@ -1,0 +1,31 @@
+﻿body
+{
+	background: rgba(13, 122, 160, 0.9); /* rdba - красный зеленый синий прозрачность(смешане цветов) #2322aa   red, blue, */
+	padding: 0px 20px 20px 20px; /* отступы внутри элемента (начинается с верху и по часовой)от - верх, право, низ, лево */
+	margin: 0;
+	/*top regtht bottom left 
+	  верх право низ лево*/
+}
+p {
+	color:rgb(255, 255, 255);
+	font-size: 18px;
+	font-family:"Kurale", Arial, Helvetica, sans-serif
+}
+h1, h2, h3{
+	color: rgb(255, 255, 255);
+	font-family: Arial, "Palatino Linotype", serif;
+	border-bottom:2px solid #ff3412; /* бордюр толщина линии 2 пикселя, линия будет прямая, цвет красный*/
+        /*padding добавляет пространство внутри элемента*/
+	padding-top:12px; /*внутренние отступы*/
+	padding-bottom: 4px;
+}
+h1{
+	font-size: 2em;
+}
+#logo{
+	font-size: 2.1em;
+	text-align:center;
+	margin-bottom: 26px;
+	background: red;
+	border-radius: 0 0 10px 10px;
+}
